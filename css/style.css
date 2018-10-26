@@ -1,0 +1,36 @@
+.done-header {
+  background-color: #007bff59;
+}.correction-header {
+  background-color: #ffc10778;
+}.toPrint-header {
+  background-color: #28a7456e;
+}
+
+.done-bg {
+  background-color: #5EAAFF;
+}.done:hover {
+  background-color: #007bff1f;
+}
+
+.correction-bg {
+  background-color: #ffc1078c;
+}.correction:hover {
+  background-color: #ffc10738;
+}
+
+.to-print-bg {
+  background-color: #28a745a6;
+}.to-print:hover {
+  background-color: #28a74533;
+}
+
+.bg-clear {
+  background: none!important;
+}
+
+#save-input {
+  background-color: #007bff59;
+  color: #fff;
+}#save-input:hover {
+  background-color: #007bff94;
+}

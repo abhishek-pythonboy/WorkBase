@@ -1,0 +1,25 @@
+var jayantaGuha = [
+    {
+      "sheets": "12x18 30 sheets - Partha weds Srijayee",
+      "printType": "Canvera-st",
+      "done": true,
+      "correction": true,
+      "toPrint": false
+    },
+    {
+      "sheets": "12x18 30 sheets",
+      "printType": "Canvera-pr",
+      "done": true,
+      "correction": false,
+      "toPrint": false
+    },
+    {
+      "sheets": "12x18 50 sheets",
+      "printType": "Vista",
+      "done": true,
+      "correction": true,
+      "toPrint": true
+    }
+];
+
+var str = JSON.stringify(jayantaGuha);
