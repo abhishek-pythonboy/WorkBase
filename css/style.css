@@ -9,28 +9,37 @@
 .done-bg {
   background-color: #5EAAFF;
 }.done:hover {
-  background-color: #007bff1f;
+  cursor: pointer;
 }
 
 .correction-bg {
   background-color: #ffc1078c;
 }.correction:hover {
-  background-color: #ffc10738;
+  cursor: pointer;
 }
 
 .to-print-bg {
   background-color: #28a745a6;
 }.to-print:hover {
-  background-color: #28a74533;
+  cursor: pointer;
 }
 
 .bg-clear {
   background: none!important;
 }
 
+input {
+  padding-left: 5px;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+}input::placeholder {
+  color: #999;
+}
+
 #save-input {
   background-color: #007bff59;
   color: #fff;
+  padding: 2px 37px;
 }#save-input:hover {
   background-color: #007bff94;
 }

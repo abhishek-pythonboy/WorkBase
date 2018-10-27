@@ -1,6 +1,7 @@
 var clientsTable = document.getElementById("clients-table");
 
 var count = document.getElementsByClassName("count");
+var date = document.getElementsByClassName("date");
 var sheets = document.getElementsByClassName("sheets");
 var printType = document.getElementsByClassName("printType");
 
@@ -10,6 +11,7 @@ var toPrint = document.getElementsByClassName("to-print");
 
 
 //parsing json
+var str = JSON.stringify(jayantaGuha);
 var parsedJSON = JSON.parse(str);
 
 // putting them into html
@@ -17,7 +19,7 @@ var i;
 for(i=0;i<parsedJSON.length;i++) {
 
 // creating the table
-  clientsTable.innerHTML += '<tr><td scope="row" class="count">'+(i+1)+'</td><td class="sheets">'+parsedJSON[i].sheets+'</td><td class="printType">'+parsedJSON[i].printType+'</td><td class="done"></td><td class="correction"></td><td class="to-print"></td></tr>';
+  clientsTable.innerHTML += '<tr><td scope="row" class="count">'+(i+1)+'</td><td class="date">'+parsedJSON[i].date+'</td>'+'</td><td class="sheets">'+parsedJSON[i].sheets+'</td><td class="printType">'+parsedJSON[i].printType+'</td><td class="done"></td><td class="correction"></td><td class="to-print"></td></tr>';
 
   if (parsedJSON[i].done) {
     doneDiv[i].className += " done-bg";
@@ -36,29 +38,52 @@ for(i=0;i<parsedJSON.length;i++) {
   } else {
     toPrint[i].classList.remove("to-print-bg");
   }
+
 }
 
-//making input section
-  var inputSection = '<tr id="input-section"><td scope="row" class="count"></td><td class="sheets"><input type="text" id="sheet-input" style="width:530px;"></td><td class="printType"><input type="text" id="print-type-input" style="width:130px;"></td><td class="done"></td><td class="correction"></td><td class="to-print"></td></tr>';
+// ------------ changing the bgcolor on clickevent 
 
-    clientsTable.innerHTML += inputSection;
-// making variables from the input section
+  for (var k=0;k<doneDiv.length;k++) {
+      doneDiv[k].addEventListener("click", function(){
+          
+          this.classList.toggle("done-bg");
+      })
+
+      correction[k].addEventListener("click", function(){
+          
+          this.classList.toggle("correction-bg");
+      })
+
+      toPrint[k].addEventListener("click", function(){
+          
+          this.classList.toggle("to-print-bg");
+      })
+  }
+
 
 var saveInput = document.getElementById("save-input");
 
+// update table with new input date and save to query for final save
 function inputSave() {
   // variables are made after onclick
+var dateInput = document.getElementById("date-input").value;
 var sheetInput = document.getElementById("sheet-input").value;
 var sheetTypeInput = document.getElementById("print-type-input").value;
 var reg1 = /\d{2}x\d{2}[- ]\d{2}[- ]?\w+.*/g;
+var reg2 = /^\d{1,2}\/\d{1,2}\/\d{2}/g;
+
+
 
   if (sheetInput !== "" && sheetTypeInput !== "") {
-    if (reg1.test(sheetInput)) {
-      var newInput = '<tr><td scope="row" class="count">'+(i+1)+'</td><td class="sheets">'+sheetInput+'</td><td class="printType">'+sheetTypeInput+'</td><td class="done"></td><td class="correction"></td><td class="to-print"></td></tr>';
+    if (reg1.test(sheetInput) && reg2.test(dateInput)) {
+      clientsTable.innerHTML += '<tr><td class="count">'+(i+1)+'</td><td class="sheets">'+dateInput+'</td><td class="sheets">'+sheetInput+'</td><td class="printType">'+sheetTypeInput+'</td><td class="done"></td><td class="correction"></td><td class="to-print"></td></tr>';
 
-      var inputTR = document.getElementById("input-section");
+      i++; //increment count number
 
-      clientsTable.insertBefore(newInput, inputTR);
+      document.getElementById("date-input").value = "";
+      document.getElementById("sheet-input").value = "";
+      document.getElementById("print-type-input").value = "";
+
     } else {
       alert("Invalid input");
     }
@@ -67,3 +92,5 @@ var reg1 = /\d{2}x\d{2}[- ]\d{2}[- ]?\w+.*/g;
     alert("fill in the form first");
   }
 }
+
+

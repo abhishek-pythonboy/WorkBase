@@ -1,5 +1,6 @@
 var jayantaGuha = [
     {
+      "date": "25/05/18",
       "sheets": "12x18 30 sheets - Partha weds Srijayee",
       "printType": "Canvera-st",
       "done": true,
@@ -7,6 +8,7 @@ var jayantaGuha = [
       "toPrint": false
     },
     {
+      "date": "25/05/18",
       "sheets": "12x18 30 sheets",
       "printType": "Canvera-pr",
       "done": true,
@@ -14,6 +16,7 @@ var jayantaGuha = [
       "toPrint": false
     },
     {
+      "date": "25/05/18",
       "sheets": "12x18 50 sheets",
       "printType": "Vista",
       "done": true,
@@ -22,4 +25,3 @@ var jayantaGuha = [
     }
 ];
 
-var str = JSON.stringify(jayantaGuha);
