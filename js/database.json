@@ -1,23 +1,91 @@
 var jayantaGuha = [
+
     {
       "date": "25/05/18",
       "sheets": "12x18 30 sheets - Partha weds Srijayee",
       "printType": "Canvera-st",
       "done": true,
       "correction": true,
-      "toPrint": false
+      "toPrint": true
     },
     {
-      "date": "25/05/18",
-      "sheets": "12x18 30 sheets",
+      "date": "27/05/18",
+      "sheets": "12x18 30 sheets - Priya weds Sanjay",
       "printType": "Canvera-pr",
+      "done": true,
+      "correction": true,
+      "toPrint": true
+    },
+    {
+      "date": "28/05/18",
+      "sheets": "12x15 50 sheets - Bappa weds Sweety",
+      "printType": "Vista",
+      "done": true,
+      "correction": true,
+      "toPrint": true
+    },
+    {
+      "date": "03/06/18",
+      "sheets": "10x14 20 sheets",
+      "printType": "Vista",
       "done": true,
       "correction": false,
       "toPrint": false
     },
     {
-      "date": "25/05/18",
-      "sheets": "12x18 50 sheets",
+      "date": "08/06/18",
+      "sheets": "12x15 50 sheets - Anush Annaprashan",
+      "printType": "Star light",
+      "done": true,
+      "correction": true,
+      "toPrint": false
+    },
+    {
+      "date": "15/06/18",
+      "sheets": "12x15 25 sheets - Abhimanyu Annaprashan",
+      "printType": "Vista",
+      "done": false,
+      "correction": false,
+      "toPrint": false
+    },
+    {
+      "date": "15/07/18",
+      "sheets": "10x14 35 sheets - Shreya birthday",
+      "printType": "Vista",
+      "done": false,
+      "correction": false,
+      "toPrint": false
+    }
+];
+
+var koushikKoley = [
+    {
+      "date": "03/06/18",
+      "sheets": "12x18 30 sheets - Rath Yatra 2018",
+      "printType": "Star light",
+      "done": true,
+      "correction": true,
+      "toPrint": true
+    },
+    {
+      "date": "15/07/18",
+      "sheets": "12x18 30 sheets - Rahul weds Priya",
+      "printType": "Vista",
+      "done": true,
+      "correction": false,
+      "toPrint": false
+    },
+    {
+      "date": "21/08/18",
+      "sheets": "11x16 25 sheets - Shreya and Shashwata anniversary",
+      "printType": "Canvera-st",
+      "done": false,
+      "correction": false,
+      "toPrint": false
+    },
+    {
+      "date": "29/09/18",
+      "sheets": "12x18 30 sheets - Debayan weds Riyanka",
       "printType": "Vista",
       "done": true,
       "correction": true,
@@ -25,3 +93,29 @@ var jayantaGuha = [
     }
 ];
 
+var hemadriManna = [
+    {
+      "date": "01/02/18",
+      "sheets": "12x18 15 sheets - Ratul weds Priyanka",
+      "printType": "Vista",
+      "done": false,
+      "correction": false,
+      "toPrint": false
+    },
+    {
+      "date": "05/02/18",
+      "sheets": "12x18 30 sheets - Dipayan weds Shreya",
+      "printType": "Canvera-pr",
+      "done": true,
+      "correction": true,
+      "toPrint": true
+    },
+    {
+      "date": "08/08/18",
+      "sheets": "11x16 25 sheets - Sanghita Annaprashan",
+      "printType": "Canvera-st",
+      "done": true,
+      "correction": false,
+      "toPrint": false
+    }
+];

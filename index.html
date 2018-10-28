@@ -22,9 +22,9 @@
     Choose client
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Jayanta Guha</a>
-    <a class="dropdown-item" href="#">Koushik Koley</a>
-    <a class="dropdown-item" href="#">Hemadri Manna</a>
+    <a class="dropdown-item" href="#" onclick="showData(jayantaGuha);clientName.innerHTML=this.innerHTML;">Jayanta Guha</a>
+    <a class="dropdown-item" href="#" onclick="showData(koushikKoley);clientName.innerHTML=this.innerHTML;">Koushik Koley</a>
+    <a class="dropdown-item" href="#" onclick="showData(hemadriManna);clientName.innerHTML=this.innerHTML;">Hemadri Manna</a>
   </div>
 </div>
     </div>
@@ -32,7 +32,7 @@
     <div class="col-md-8">
 
       <div class="float-right">
-        <span id="clientName">Jayanta Guha</span>
+        <span id="client-name"></span>
       <button class="btn btn-info">Details</button>
       <button class="btn btn-dark">Manage Clients</button>
       </div>

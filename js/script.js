@@ -1,3 +1,4 @@
+var clientName = document.getElementById("client-name");
 var clientsTable = document.getElementById("clients-table");
 
 var count = document.getElementsByClassName("count");
@@ -9,13 +10,22 @@ var doneDiv = document.getElementsByClassName("done");
 var correction = document.getElementsByClassName("correction");
 var toPrint = document.getElementsByClassName("to-print");
 
+var i;
+
+// function dropdownLoad() {
+
+// }
+
+function showData(client) {
+
+//clear every data from previous load
+clientsTable.innerHTML = "";
 
 //parsing json
-var str = JSON.stringify(jayantaGuha);
+var str = JSON.stringify(client);
 var parsedJSON = JSON.parse(str);
 
-// putting them into html
-var i;
+
 for(i=0;i<parsedJSON.length;i++) {
 
 // creating the table
@@ -59,6 +69,9 @@ for(i=0;i<parsedJSON.length;i++) {
           this.classList.toggle("to-print-bg");
       })
   }
+}
+
+
 
 
 var saveInput = document.getElementById("save-input");
@@ -92,5 +105,3 @@ var reg2 = /^\d{1,2}\/\d{1,2}\/\d{2}/g;
     alert("fill in the form first");
   }
 }
-
-
